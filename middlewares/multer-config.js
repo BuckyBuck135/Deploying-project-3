@@ -1,3 +1,4 @@
+const path = require('path'); 
 const multer = require('multer')
 
 const MIME_TYPE = {
@@ -9,7 +10,7 @@ const MIME_TYPE = {
 
 const storage = multer.diskStorage({
 	destination: function (req, file, callback) {
-		callback(null, './images')
+		callback(null, path.join(__dirname, '/images'))
 	},
 	filename:  (req, file, callback) => {
 		const filename = file.originalname.split(' ').join('_')
