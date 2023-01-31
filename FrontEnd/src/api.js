@@ -5,7 +5,7 @@ import { fileInput, titleInput, categoryInput, deleteMessage, uploadMessage} fro
 
 export async function getAllWorks() {
     try {
-        const data = await fetch("http://localhost:5678/api/works");
+        const data = await fetch("https://sophie-bluel-architecte.onrender.com/api/works");
         return data.json();
     } 
     catch (error) {
@@ -16,7 +16,7 @@ export async function getAllWorks() {
 export async function deleteWorks(imageId) {
     try {
         const token = localStorage.getItem("token");
-        const res = await fetch(`http://localhost:5678/api/works/${imageId}`, {
+        const res = await fetch(`https://sophie-bluel-architecte.onrender.com/api/works/${imageId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': 'Bearer ' + token,
@@ -47,7 +47,7 @@ export async function postUploadForm() {
     try {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://localhost:5678/api/works", {
+        const res = await fetch("https://sophie-bluel-architecte.onrender.com/api/works", {
             method: 'POST',
             body: uploadFormData,
             headers: {
