@@ -53,6 +53,7 @@ export async function postUploadForm() {
             headers: {
                 'Authorization': 'Bearer ' + token,
                 'Accept': 'application/json',
+                'Access-Control-Allow-Origin': "*"
             }
         });
         if (!res.ok) {
