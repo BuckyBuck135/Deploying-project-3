@@ -60,13 +60,13 @@ export async function postUploadForm() {
             throw new Error('Failed to upload resource');
         }
         const data = await res.json();
-        renderSuccessMessage(uploadMessage, "Gallerie mise à jour", "top-3em")
+        renderSuccessMessage(uploadMessage, "Galerie mise à jour", "top-3em")
         renderModalGrid();
         renderAllWorks();
         clearForm() 
     } 
     catch (error) {
         console.log(error.message);
-        renderErrorMessage(uploadMessage, "Erreur lors de la mise à jour de la gallerie", "top-3em")
+        renderErrorMessage(uploadMessage, "Erreur lors de la mise à jour de la galerie", "top-3em")
     }
 }
