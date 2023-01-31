@@ -37,7 +37,7 @@ export async function renderAllWorks() {
     for (let work of works) {
         html += `
         <figure>
-            <img src="${work.imageUrl.replace("http://localhost:5678/", "").replace(/\d+\.png/, ".png")}" alt="${work.title}" crossorigin="anonymous">
+            <img src="${work.imageUrl.replace("http://localhost:5678", "assets").replace(/\d+\.png/, ".png")}" alt="${work.title}" crossorigin="anonymous">
             <figcaption>${work.title}</figcaption>
         </figure>
         `
