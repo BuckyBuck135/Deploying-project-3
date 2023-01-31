@@ -10,7 +10,7 @@ loginForm.addEventListener("submit", sendLogin)
 async function sendLogin(e) {
     e.preventDefault();
     try {
-        const res = await fetch("http://localhost:5678/api/users/login", {
+        const res = await fetch("https://sophie-bluel-architecte.onrender.com/api/users/login", {
             method: "POST",
             headers: {
                 'Accept': 'application/json', 
