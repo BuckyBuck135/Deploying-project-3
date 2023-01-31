@@ -55,7 +55,7 @@ export async function renderFilteredWorks(category) {
             if(work.categoryId === category) {
                 html += `
                     <figure>
-                        <img src="${work.imageUrl.replace("http://localhost:5678/", "")}" alt="${work.title}" crossorigin="anonymous">
+                        <img src="${work.imageUrl.replace("http://localhost:5678", "assets").replace(/\d+\.png/, ".png")}" alt="${work.title}" crossorigin="anonymous">
                         <figcaption>${work.title}</figcaption>
                     </figure>
                 `
@@ -165,7 +165,7 @@ export async function renderModalGrid() {
     for (let work of works) {
         html += `
         <figure class="modal-figure">
-            <img class="grid-img" id="${work.id}" src="${work.imageUrl}" alt="${work.title}" crossorigin="anonymous">
+            <img class="grid-img" id="${work.id}" src="${work.imageUrl.replace("http://localhost:5678", "assets").replace(/\d+\.png/, ".png")}" alt="${work.title}" crossorigin="anonymous">
             <div class="icon-wrapper">
                 <button  class="move-btn"><img data-move="${work.id}" src="assets/icons/move.png" class="move-icon" alt="Icône déplacer."></button>
                 <button  class="delete-btn"><img data-delete="${work.id}" src="assets/icons/delete.png" class="delete-icon" alt="Icône poubelle."></button>
