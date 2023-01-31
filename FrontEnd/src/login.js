@@ -15,6 +15,7 @@ async function sendLogin(e) {
             headers: {
                 'Accept': 'application/json', 
                 'Content-Type': 'application/json',
+                'content-type: multipart/form-data'
                 'Access-Control-Allow-Origin': "*"
             },
             body: JSON.stringify({
